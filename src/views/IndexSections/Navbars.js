@@ -45,7 +45,7 @@ class Navbars extends React.Component {
             <h2 className="text-center text_black">
             CarteTheBlanche
             </h2>
-            <h3 className=" text_black">
+            <h3 className=" text_black Eina01-Regular">
             In French, "carte" translates to "document," and "blanche" means blank. Together, "carte blanche" refers to a blank canvas, symbolizing the beginning of a new journey. Just like starting a new adventure, you commence with a blank page, providing you with the opportunity to craft your unique path forward.
 
             </h3>
@@ -95,7 +95,7 @@ class Navbars extends React.Component {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                     <i class="fa fa-instagram"></i>
+                     <i className="fa fa-instagram"></i>
                       <span className="nav-link-inner--text d-lg-none">
                         Profile
                       </span>
@@ -107,7 +107,7 @@ class Navbars extends React.Component {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                     <i class="fa fa-instagram"></i>
+                     <i className="fa fa-instagram"></i>
                       <span className="nav-link-inner--text d-lg-none">
                         Profile
                       </span>

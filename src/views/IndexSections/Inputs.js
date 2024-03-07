@@ -24,7 +24,7 @@ class Inputs extends React.Component {
               Elevate Your Business Journey with Our Newsletter!
             </h2>
             <div className="mb-3">
-              <h3 className="text_black text-left">
+              <h3 className="text_black text-left Eina01-Regular">
                 Subscribe to our exclusive newsletter for a powerhouse of business insights, insider tips, and venture opportunities delivered directly to your inbox. From expert advice and strategic guidance to emerging ventures and special offers, we've got your entrepreneurial needs covered.
               </h3>
             </div>

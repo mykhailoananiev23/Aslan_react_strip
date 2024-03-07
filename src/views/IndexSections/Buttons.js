@@ -15,9 +15,7 @@ class BasicElements extends React.Component {
               <Col >
                 {/* Basic elements */}
                 <h1 className="mb-1">
-                  <span>
                     Take the next step to become financial free
-                  </span>
                 </h1>
                 {/* Buttons */}
                 <h2>
@@ -57,16 +55,15 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="UnderLine1 pb-2 pt-2">
-                    <small >
+                  <div className="UnderLine1 pb-2 pt-1">
+                    
                       The Build package is designed for entrepreneurs and businesses looking to establish a strong foundation for their ventures. Whether you're a startup or entering a new market, this package provides essential resources and guidance to kickstart your business journey.
-                    </small>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2" >
                     <div className="d-flex  min_ ">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small >
+                        <small className="EinaclassName">
                           Specific ideas for business to start with proven potential.
                         </small>
                       </div>
@@ -74,7 +71,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small >
+                        <small className="EinaclassName">
                           Selecting a business name, and making crucial early decisions.
                         </small>
                       </div>
@@ -82,7 +79,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small >
+                        <small className="EinaclassName">
                           Insights into market research and identifying your target audience.
                         </small>
                       </div>
@@ -90,15 +87,15 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small >
+                        <small className="EinaclassName">
                           Creating a brand identity and establishing an online presence.
                         </small>
                       </div>
                     </div>
-                    <div className="d-flex  min_ mb-1">
+                    <div className="d-flex  min_ mb-2">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Resources to help you refine and develop your chosen business idea.
                         </small>
                       </div>
@@ -120,7 +117,7 @@ class BasicElements extends React.Component {
                       <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer
                     </small>
                   </div>
-                  <div className="d-flex justify-content-between UnderLine1 pb-2 pt-2">
+                  <div className="d-flex justify-content-between UnderLine1 pb-1 pt-2">
                     <h2 className="d-flex justify-content-center align-items-center pb-2 pt-2 ">
                       Grow
                     </h2>
@@ -140,47 +137,47 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2">
-                    <small >
+                    <small className="Eina01-Regular">
                       The Grow package is tailored for businesses seeking to expand and scale their operations on a global scale. Whether you're entering new markets or aiming for increased market share, this package provides strategies and insights to foster sustainable growth.
                     </small>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2 ">
                     <div className="d-flex  min_">
-                      <i className="fa fa-check pr-2 pt-2"></i>
+                      <i className="fa fa-check pr-2 pt-1"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           In-depth analysis of international market trends and consumer behavior.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_  ">
-                      <i className="fa fa-check pr-2 pt-2"></i>
+                      <i className="fa fa-check pr-2 pt-1"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Marketing strategies adaptable to different cultures and regions.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_ ">
-                      <i className="fa fa-check pr-2 pt-2"></i>
+                      <i className="fa fa-check pr-2 pt-1"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Scalable business practices and operational optimization tips.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_ mt-2 ">
-                      <i className="fa fa-check pr-2 pt-2"></i>
+                      <i className="fa fa-check pr-2 pt-1"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Scientifically Proven Behaviors that Lead to Success
                         </small>
                       </div>
                     </div>
-                    <div className="d-flex  min_ pb-3">
-                      <i className="fa fa-check pr-2 pt-2"></i>
+                    <div className="d-flex  min_ pb-2">
+                      <i className="fa fa-check pr-2 pt-1"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Sustained Growth Blueprint (100-Day Guide)
                         </small>
                       </div>
@@ -223,47 +220,47 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2">
-                    <small >
+                    <small className="Eina01-Regular">
                       Businesses thinking about different exit options, like selling, merging, or acquiring, can use the Exit package. This package offers advice on the complex process of business exit, whether your goal is to realize your success or pursue new ventures.
                     </small>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2 ">
                     <div className="d-flex  min_ ">
-                      <i className="fa fa-check pt-2 pr-2"></i>
+                      <i className="fa fa-check pt-1 pr-2"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Access to professional business valuation services.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_">
-                      <i className="fa fa-check pt-2 pr-2"></i>
+                      <i className="fa fa-check pt-1 pr-2"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Comprehensive guide on developing an effective exit strategy.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_">
-                      <i className="fa fa-check pt-2 pr-2"></i>
+                      <i className="fa fa-check pt-1 pr-2"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Legal and financial consultations with professionals experienced in business exit transactions.
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_">
-                      <i className="fa fa-check pt-2 pr-2"></i>
+                      <i className="fa fa-check pt-1 pr-2"></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Guidance on navigating mergers and acquisitions, educational materials on the M&A process
                         </small>
                       </div>
                     </div>
                     <div className="d-flex  min_ mb-2">
-                      <i className="fa fa-check pt-2 pr-2 "></i>
+                      <i className="fa fa-check pt-1 pr-2 "></i>
                       <div>
-                        <small >
+                        <small className="Eina01-Regular">
                           Tax experts to offer services focused on tax planning during the exit process.
 
                         </small>
