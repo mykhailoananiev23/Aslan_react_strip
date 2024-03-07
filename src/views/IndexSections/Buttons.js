@@ -2,6 +2,7 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class BasicElements extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class BasicElements extends React.Component {
               <Col >
                 {/* Basic elements */}
                 <h1 className="mb-1">
-                    Take the next step to become financial free
+                  Take the next step to become financial free
                 </h1>
                 {/* Buttons */}
                 <h2>
@@ -56,8 +57,8 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <div className="UnderLine1 pb-2 pt-1">
-                    
-                      The Build package is designed for entrepreneurs and businesses looking to establish a strong foundation for their ventures. Whether you're a startup or entering a new market, this package provides essential resources and guidance to kickstart your business journey.
+
+                    The Build package is designed for entrepreneurs and businesses looking to establish a strong foundation for their ventures. Whether you're a startup or entering a new market, this package provides essential resources and guidance to kickstart your business journey.
                   </div>
                   <div className="UnderLine1 pb-2 pt-2" >
                     <div className="d-flex  min_ ">
@@ -101,10 +102,12 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <Button className="w-100 pb-2 pt-2" color="primary" type="button">
-                    Choose <br />
-                    <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
-                  </Button>
+                  <Link to="/build">
+                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
+                      Choose <br />
+                      <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
+                    </Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg="12" md="12" sm="12" xl="4" className="mt-5  " >
@@ -183,10 +186,13 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <Link to="/landing-page">
+
                   <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
                     Choose <br />
                     <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
                   </Button>
+                  </Link>
                 </div>
               </Col>
 
@@ -207,10 +213,10 @@ class BasicElements extends React.Component {
                     <div >
                       <div className="d-flex">
                         <div>
-                        <div className="pb-0 pt-3 justify-content-between flex-column">
-                          <div></div>
-                           <img className=" rounded"  style={{width:"3em"}} src={"/img/theme/run.png"}  />
-                        </div>
+                          <div className="pb-0 pt-3 justify-content-between flex-column">
+                            <div></div>
+                            <img className=" rounded" style={{ width: "3em" }} src={"/img/theme/run.png"} />
+                          </div>
                         </div>
                         <div>
                           <h3 className="text-right w-100 mt-4 mb-0  text-sky text-across text-align-left"></h3>
