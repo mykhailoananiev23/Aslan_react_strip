@@ -1,89 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { Link } from "react-router-dom";
-import { Button, Card, CardHeader, CardBody, Form, Container, Row, Col } from "reactstrap";
 
-const CheckoutForm = ({ price }) => {
-    const [paymentMethod, setPaymentMethod] = useState(null);
-    const stripe = useStripe();
-    const elements = useElements();
-    // const [amount, setAmount] = useState(0); // State to hold the payment amount
-    const handleCardSubmit = async (event) => {
-        event.preventDefault();
-        if (!stripe || !elements) {
-            return;
-        }
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: elements.getElement(CardElement),
-        });
-        if (error) {
-            console.error(error);
-        } else {
-            // Send payment details to your server
-            const response = await fetch('/api/charge', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    amount: price,
-                    payment_method: paymentMethod.id,
-                }),
-            });
 
-            if (response.ok) {
-                console.log('Payment successful!');
-            } else {
-                console.error('Payment failed:', await response.text());
-            }
-        }
-    };
-// Function to handle amount input
- 
-    return (
-        <div style={{ height: "100vh" }}>
-            <section className="section">
-                <Container>
-                    <Row className="justify-content-center" style={{ paddingTop: "15vh" }}>
-                        <Col lg="10" md="12" sm="12" xs="12" xl="6" >
-                            <Card className="bg-secondary shadow border-0">
-                                <CardHeader className="bg-sky pb-1">
-                                    <h5 className='text-white text-center '>Pay with Credit Card</h5>
-                                </CardHeader>
-                                <CardBody>
-                                    <h2 className='text-center text-primary mb-5'>You will Pay : ${price}</h2>
+import React, { useEffect, useState } from "react";
+import {
+  PaymentElement,
+  useStripe,
+  useElements
+} from "@stripe/react-stripe-js";
 
-                                    <Form role="form" onSubmit={handleCardSubmit}>
-                                        <div className="pl-4 pr-4 custom-control-alternative custom-checkbox">
-                                            <div className="text-left text-muted mb-1">
-                                                <small>Input your Payment Info:</small>
-                                            </div>
-                                            <CardElement className="card-element input-group-alternative mb-3" />
-                                        </div>
-                                        <div className="text-right mx-4 mt-5 d-flex justify-content-between">
-                                            <Link className="text-gray pt-3 " to="/">
-                                                <small>Back Home</small>
-                                            </Link>
-                                            <Button type="submit" disabled={!stripe} className="w-25" color="primary">
-                                                Pay
-                                            </Button>
-                                        </div>
-                                    </Form>
-                                    {paymentMethod && (
-                                        <div>
-                                            <h3>Payment Successful!</h3>
-                                            <p>Payment Method: {paymentMethod.type}</p>
-                                        </div>
-                                    )}
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-        </div>
+export default function CheckoutForm() {
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const [message, setMessage] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!stripe) {
+      return;
+    }
+
+    const clientSecret = new URLSearchParams(window.location.search).get(
+      "payment_intent_client_secret"
     );
-};
 
-export default CheckoutForm;
+    if (!clientSecret) {
+      return;
+    }
+
+    stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
+      switch (paymentIntent.status) {
+        case "succeeded":
+          setMessage("Payment succeeded!");
+          break;
+        case "processing":
+          setMessage("Your payment is processing.");
+          break;
+        case "requires_payment_method":
+          setMessage("Your payment was not successful, please try again.");
+          break;
+        default:
+          setMessage("Something went wrong.");
+          break;
+      }
+    });
+  }, [stripe]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!stripe || !elements) {
+      // Stripe.js hasn't yet loaded.
+      // Make sure to disable form submission until Stripe.js has loaded.
+      return;
+    }
+
+    setIsLoading(true);
+
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        // Make sure to change this to your payment completion page
+        return_url: "http://localhost:3000",
+      },
+    });
+
+    // This point will only be reached if there is an immediate error when
+    // confirming the payment. Otherwise, your customer will be redirected to
+    // your `return_url`. For some payment methods like iDEAL, your customer will
+    // be redirected to an intermediate site first to authorize the payment, then
+    // redirected to the `return_url`.
+    if (error.type === "card_error" || error.type === "validation_error") {
+      setMessage(error.message);
+    } else {
+      setMessage("An unexpected error occurred.");
+    }
+
+    setIsLoading(false);
+  };
+
+  const paymentElementOptions = {
+    layout: "tabs"
+  }
+
+  return (
+    <form id="payment-form" onSubmit={handleSubmit}>
+
+      <PaymentElement id="payment-element" options={paymentElementOptions} />
+      <button disabled={isLoading || !stripe || !elements} id="submit">
+        <span id="button-text">
+          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+        </span>
+      </button>
+      {/* Show any error or success messages */}
+      {message && <div id="payment-message">{message}</div>}
+    </form>
+  );
+}

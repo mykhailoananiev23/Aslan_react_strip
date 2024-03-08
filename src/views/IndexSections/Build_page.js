@@ -9,7 +9,9 @@ class BasicElements extends React.Component {
   render() {
     return (
       <>
+         <Link to={"/"}>
         <DemoNavbar />
+        </Link>
         <section className="section section-components " id="section-components"
         >
           <Container>
