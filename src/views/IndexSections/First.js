@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 class BasicElements extends React.Component {
   render() {
 
-
+    const payment = () => {
+      
+    }
 
     return (
       <>
@@ -190,7 +192,7 @@ class BasicElements extends React.Component {
                   </div>
                   <Link to="/Grow_Pay">
 
-                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
+                    <Button className="w-100 pb-2 pt-2 " onClick={payment} color="primary" type="button">
                       Choose <br />
                       <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
                     </Button>

@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^4.6.2",
+    "concurrently": "^8.2.2",
     "express": "^4.18.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,14 +23,11 @@
     "web-vitals": "^2.1.4"
   },
   "homepage": "http://localhost:3000/",
-  "proxy": {
-    "/auth/google": {
-      "target": "localhost:4242"
-    }
-  },
+  "proxy": "http://localhost:4242",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -4,25 +4,27 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = 'http://localhost:3000/build';
-
+const YOUR_DOMAIN = 'https://aslan-react-strip.vercel.app'
+app.use(express.json());
 app.post('/create-checkout-session', async (req, res) => {
+  const PRICE = req.body.price;
+  const TAGET=req.body.target;
+console.log(TAGET);
   const session = await stripe.checkout.sessions.create({
     ui_mode: 'embedded',
     line_items: [
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: 'price_1Os9Ga2MYeojk7Wwjo9l03do',
+        price: PRICE,
         quantity: 1,
       },
     ],
     mode: 'payment',
-    return_url: `${YOUR_DOMAIN}/return?session_id={CHECKOUT_SESSION_ID}`,
+    return_url: `${YOUR_DOMAIN}/${TAGET}`,
   });
 
   res.send({clientSecret: session.client_secret});
 });
-// console.log(req.body);
 
 app.get('/session-status', async (req, res) => {
   const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
@@ -32,4 +34,5 @@ app.get('/session-status', async (req, res) => {
     customer_email: session.customer_details.email
   });
 });
+
 app.listen(4242, () => console.log('Running on port 4242'));
