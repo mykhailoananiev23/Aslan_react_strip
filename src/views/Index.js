@@ -9,12 +9,6 @@ import Testimonials from "./IndexSections/Testimonials.js";
 
 export default function Index(props) {
 
-  const [priceInfo, setPriceInfo] = useState();
-  const setpriceInfo=";;;";
-  useEffect(() => {
-    // alert()
-    props.setPriceMainInfo(priceInfo)
-  }, priceInfo)
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -23,7 +17,7 @@ export default function Index(props) {
   return (
     <>
       <DemoNavbar />
-      <First setPriceInfo={setpriceInfo} />
+      <First  />
       <Testimonials />
       <Email />
       <Footer />

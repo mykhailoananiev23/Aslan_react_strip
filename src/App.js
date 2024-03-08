@@ -9,15 +9,17 @@ import Pay from "./views/stripe/Pay.js";
 import { useState } from "react";
 import Count from './counter.js'
 function App() {
-  const [priceMainInfo, setPriceMainInfo] = useState(23);
   return (
   //   <Provider store={store}>
   //   <App />
   // </Provider>,
     <BrowserRouter>
       <Routes>
-        <Route path="/"    exact element={<Index setPriceMainInfo={setPriceMainInfo} />} />
-        <Route path="/Pay" exact element={<Pay PRICEINFO={priceMainInfo}  />} />
+        <Route path="/"    exact element={<Index />} />
+        <Route path="/Pay1" exact element={<Pay PRICEINFO={950}  />} />
+        <Route path="/Pay2" exact element={<Pay PRICEINFO={2950}  />} />
+        <Route path="/Pay3" exact element={<Pay PRICEINFO={8950}  />} />
+
         <Route path="/counter" exact element={<Count  />}/>
 
       </Routes>

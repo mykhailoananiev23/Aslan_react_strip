@@ -7,7 +7,7 @@ const CheckoutForm = ({ price }) => {
     const [paymentMethod, setPaymentMethod] = useState(null);
     const stripe = useStripe();
     const elements = useElements();
-
+    // const [amount, setAmount] = useState(0); // State to hold the payment amount
     const handleCardSubmit = async (event) => {
         event.preventDefault();
         if (!stripe || !elements) {
@@ -20,12 +20,27 @@ const CheckoutForm = ({ price }) => {
         if (error) {
             console.error(error);
         } else {
-            console.log(paymentMethod);
-            setPaymentMethod(paymentMethod);
-            // Submit paymentMethod.id to your server to complete the payment
+            // Send payment details to your server
+            const response = await fetch('/api/charge', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    amount: price,
+                    payment_method: paymentMethod.id,
+                }),
+            });
+
+            if (response.ok) {
+                console.log('Payment successful!');
+            } else {
+                console.error('Payment failed:', await response.text());
+            }
         }
     };
-
+// Function to handle amount input
+ 
     return (
         <div style={{ height: "100vh" }}>
             <section className="section">
@@ -37,13 +52,13 @@ const CheckoutForm = ({ price }) => {
                                     <h5 className='text-white text-center '>Pay with Credit Card</h5>
                                 </CardHeader>
                                 <CardBody>
-                                         <h2 className='text-center text-primary mb-5'>You will Pay : ${price}</h2>
-                                  
+                                    <h2 className='text-center text-primary mb-5'>You will Pay : ${price}</h2>
+
                                     <Form role="form" onSubmit={handleCardSubmit}>
                                         <div className="pl-4 pr-4 custom-control-alternative custom-checkbox">
-                                        <div className="text-left text-muted mb-1">
-                                            <small>Input your Payment Info:</small> 
-                                        </div>
+                                            <div className="text-left text-muted mb-1">
+                                                <small>Input your Payment Info:</small>
+                                            </div>
                                             <CardElement className="card-element input-group-alternative mb-3" />
                                         </div>
                                         <div className="text-right mx-4 mt-5 d-flex justify-content-between">

@@ -104,7 +104,7 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <Link to="/pay">
+                  <Link to="/pay1">
                     <Button className="w-100 pb-2 pt-2 " color="primary" type="button" >
                       Choose <br />
                       <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
@@ -188,7 +188,7 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <Link to="/grow">
+                  <Link to="/pay2">
 
                     <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
                       Choose <br />
@@ -275,10 +275,12 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <Link to="/pay3">
                   <Button className="w-100 pb-4 pt-3 " color="light" type="button">
                     Coming soon
 
                   </Button>
+                  </Link>
                 </div>
               </Col>
             </Row>
