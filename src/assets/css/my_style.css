@@ -40,12 +40,12 @@ body {
 }
 
 .text-sky {
-    color: #2BA6FF;
+    color: #2BA6FF !important;
     line-height: 1;
 }
 
 .bg-sky {
-    background-color: #2BA6FF;
+    background-color: #2BA6FF !important;
     line-height: 1;
 }
 
@@ -358,3 +358,52 @@ h1,h2,h3,h4,h5 {
         margin-left: 91.66667%;
     }
 }
+
+
+
+/* ???  pay */
+
+/* CheckoutForm.css */
+.checkout-form-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card-form, .other-form {
+    margin-bottom: 20px;
+  }
+  
+  .card-element {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pay-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-success {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+  }
+  
+  .card-element {
+    padding: 20px;
+    color: #000;
+  }
+
+  .card-element input {
+    color: #000;
+    font-size: 5em !important;
+  }

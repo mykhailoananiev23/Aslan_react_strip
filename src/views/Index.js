@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import DemoNavbar from "../components/Navbars/DemoNavbar.js";
 
-import Buttons from "./IndexSections/Buttons.js";
-import Inputs from "./IndexSections/Inputs.js";
-import Navbars from "./IndexSections/Navbars.js";
-import Typography from "./IndexSections/Typography.js";
+import First from "./IndexSections/First.js";
+import Email from "./IndexSections/Email.js";
+import Footer from "./IndexSections/Footer.js";
+import Testimonials from "./IndexSections/Testimonials.js";
 
-export default function Index() {
+export default function Index(props) {
+
+  const [priceInfo, setPriceInfo] = useState();
+  const setpriceInfo=";;;";
+  useEffect(() => {
+    // alert()
+    props.setPriceMainInfo(priceInfo)
+  }, priceInfo)
+
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -15,10 +23,10 @@ export default function Index() {
   return (
     <>
       <DemoNavbar />
-        <Buttons />
-        <Typography />
-        <Inputs />
-        <Navbars />
+      <First setPriceInfo={setpriceInfo} />
+      <Testimonials />
+      <Email />
+      <Footer />
     </>
   )
 }

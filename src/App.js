@@ -5,18 +5,20 @@ import "./assets/css/my_style.css";
 import "./assets/vendor/font-awesome/css/font-awesome.min.css";
 import "./assets/scss/argon-design-system-react.scss?v1.1.0";
 import Index from "./views/Index";
-import Build from "./views/stripe/Build.js";
-import Grow from "./views/stripe/Grow.js";
-
-
+import Pay from "./views/stripe/Pay.js";
+import { useState } from "react";
+import Count from './counter.js'
 function App() {
+  const [priceMainInfo, setPriceMainInfo] = useState(23);
   return (
+  //   <Provider store={store}>
+  //   <App />
+  // </Provider>,
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<Index />} />
-        <Route path="/build" exact element={<Build />} />
-        <Route path="/grow" exact element={<Grow />} />
-
+        <Route path="/"    exact element={<Index setPriceMainInfo={setPriceMainInfo} />} />
+        <Route path="/Pay" exact element={<Pay PRICEINFO={priceMainInfo}  />} />
+        <Route path="/counter" exact element={<Count  />}/>
 
       </Routes>
     </BrowserRouter>

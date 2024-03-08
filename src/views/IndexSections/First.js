@@ -1,11 +1,13 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
 class BasicElements extends React.Component {
   render() {
+
+
+
     return (
       <>
         <section className="section section-components mt-2 " id="section-components"
@@ -102,8 +104,8 @@ class BasicElements extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <Link to="/build">
-                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
+                  <Link to="/pay">
+                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button" >
                       Choose <br />
                       <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
                     </Button>
@@ -188,10 +190,10 @@ class BasicElements extends React.Component {
                   </div>
                   <Link to="/grow">
 
-                  <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
-                    Choose <br />
-                    <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
-                  </Button>
+                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button">
+                      Choose <br />
+                      <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
+                    </Button>
                   </Link>
                 </div>
               </Col>
@@ -274,8 +276,8 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <Button className="w-100 pb-4 pt-3 " color="light" type="button">
-                  Coming soon 
-                   
+                    Coming soon
+
                   </Button>
                 </div>
               </Col>
