@@ -7,7 +7,7 @@ class BasicElements extends React.Component {
   render() {
 
     const payment = () => {
-      
+
     }
 
     return (
@@ -33,13 +33,13 @@ class BasicElements extends React.Component {
             <Row className="mt-6">
               <Col lg="12" md="12" sm="12" xl="4" className="mt-5  " >
                 <div className="mb-1 p-3  bg-white rounded minH">
-                  <div className="pb-2 pt-2 position-relative  d-flex justify-content-between" style={{ marginTop: "-0.9em" }}  >
+                  <div className="pb-2 pt-2 position-relative  d-flex justify-content-between" style={{ marginTop: "-0.9em", marginLeft: "-16px" }}  >
                     <small className=" " style={{ marginTop: "-2em" }}>
                       Don't miss this opportunity
                     </small>
-                    <small className=" bg-dark text-lighter pb-0 p-2 rounded mt-1 position-absolute right-0" style={{ top: "-2em" }}>
+                    <span className=" bg-dark text-lighter pb-0 p-2 rounded mt-1 position-absolute right-0" style={{ top: "-2em", fontSize: "13px" }}>
                       <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer
-                    </small>
+                    </span>
                   </div>
                   <div className="d-flex justify-content-between UnderLine1 pb-2 pt-2">
                     <h2 className="d-flex justify-content-center align-items-center pb-2 pt-2">
@@ -49,7 +49,7 @@ class BasicElements extends React.Component {
                       <div className="d-flex">
                         <div className="pb-0  pb-1 d-flex justify-content-between flex-column">
                           <div></div>
-                          <span className="rounded mb-0 pr-2 mr-3 pl-1" style={{ border: "2px solid black" }}>
+                          <span className="rounded mb-0  mr-3 " style={{ border: "2px solid black" }}>
                             <small style={{ fontSize: "14px" }}>-67.8%</small>
                           </span>
                         </div>
@@ -68,7 +68,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_ ">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small className="EinaclassName">
+                        <small className=" Eina01-Regular">
                           Specific ideas for business to start with proven potential.
                         </small>
                       </div>
@@ -76,7 +76,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small className="EinaclassName">
+                        <small className=" Eina01-Regular">
                           Selecting a business name, and making crucial early decisions.
                         </small>
                       </div>
@@ -84,7 +84,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small className="EinaclassName">
+                        <small className="Eina01-Regular">
                           Insights into market research and identifying your target audience.
                         </small>
                       </div>
@@ -92,7 +92,7 @@ class BasicElements extends React.Component {
                     <div className="d-flex  min_">
                       <i className="fa fa-check  pr-2 pt-2"></i>
                       <div>
-                        <small className="EinaclassName">
+                        <small className="Eina01-Regular">
                           Creating a brand identity and establishing an online presence.
                         </small>
                       </div>
@@ -107,9 +107,9 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <Link to="/Build_Pay">
-                    <Button className="w-100 pb-2 pt-2 " color="primary" type="button" >
+                    <Button  style={{fontSize:"25px", lineHeight:"30px "}} className="Eina01-Regular w-100 pb-2 pt-2 " color="primary" type="button" >
                       Choose <br />
-                      <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
+                      <span style={{fontSize:"12px "}} >  <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</span>
                     </Button>
                   </Link>
                 </div>
@@ -120,9 +120,9 @@ class BasicElements extends React.Component {
                     <small className="d-none " >
                       Don't miss this opportunity
                     </small>
-                    <small className=" bg-dark text-lighter pb-0 p-2 rounded mt-1 position-absolute right-0" style={{ top: "-2em" }}>
+                    <span className=" bg-dark text-lighter pb-0 p-2 rounded mt-1 position-absolute right-0" style={{ top: "-2em" , fontSize: "13px" }}>
                       <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer
-                    </small>
+                    </span>
                   </div>
                   <div className="d-flex justify-content-between UnderLine1 pb-1 pt-2">
                     <h2 className="d-flex justify-content-center align-items-center pb-2 pt-2 ">
@@ -132,7 +132,7 @@ class BasicElements extends React.Component {
                       <div className="d-flex">
                         <div className="pb-0  pb-1 d-flex justify-content-between flex-column">
                           <div></div>
-                          <span className="rounded mb-0 pr-2 mr-3 pl-1" style={{ border: "2px solid black" }}>
+                          <span className="rounded mb-0 mr-3 " style={{ border: "2px solid black" }}>
                             <small style={{ fontSize: "14px" }}>-49.5%</small>
                           </span>
                         </div>
@@ -144,9 +144,9 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <div className="UnderLine1 pb-2 pt-2">
-                    <small className="Eina01-Regular">
+                   
                       The Grow package is tailored for businesses seeking to expand and scale their operations on a global scale. Whether you're entering new markets or aiming for increased market share, this package provides strategies and insights to foster sustainable growth.
-                    </small>
+                   
                   </div>
                   <div className="UnderLine1 pb-2 pt-2 ">
                     <div className="d-flex  min_">
@@ -192,9 +192,9 @@ class BasicElements extends React.Component {
                   </div>
                   <Link to="/Grow_Pay">
 
-                    <Button className="w-100 pb-2 pt-2 " onClick={payment} color="primary" type="button">
+                    <Button  style={{fontSize:"25px", lineHeight:"30px " }} className="Eina01-Regular w-100 pb-2 pt-2 " onClick={payment} color="primary" type="button">
                       Choose <br />
-                      <small> <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer</small>
+                      <span style={{fontSize:"12px" , marginTop:""}} > <i className="fa fa-hourglass-2 text-lighter"></i> Limited-time offer </span >
                     </Button>
                   </Link>
                 </div>
@@ -211,7 +211,7 @@ class BasicElements extends React.Component {
                     </small>
                   </div>
                   <div className="d-flex justify-content-between UnderLine1 pb-2 pt-2">
-                    <h2 className="d-flex justify-content-center align-items-center ">
+                    <h2 className="d-flex justify-content-center align-items-center pb-1">
                       Exit
                     </h2>
                     <div >
@@ -219,7 +219,7 @@ class BasicElements extends React.Component {
                         <div>
                           <div className="pb-0 pt-3 justify-content-between flex-column">
                             <div></div>
-                            <img className=" rounded" style={{ width: "3em" }} src={"/img/theme/run.png"} />
+                            <img className=" rounded" style={{ width: "8em ", marginTop:"-2em" }} src={"/img/theme/run.png"} />
                           </div>
                         </div>
                         <div>
@@ -278,10 +278,9 @@ class BasicElements extends React.Component {
                     </div>
                   </div>
                   <Link to="/">
-                  <Button className="w-100 pb-4 pt-3 " color="light" type="button">
-                    Coming soon
-
-                  </Button>
+                    <Button  style={{fontSize:"25px"}} className="Eina01-Regular w-100 pb-4 pt-3 " color="light" type="button">
+                      Coming soon
+                    </Button>
                   </Link>
                 </div>
               </Col>

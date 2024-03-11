@@ -12,6 +12,10 @@
 
     height: 10%;
 }
+.BonaNova{
+    font-family: Bona Nova !important;
+
+}
 .Eina01-Regular{
     font-family: Eina01-Regular !important;
 }
@@ -80,7 +84,12 @@ h1,h2,h3,h4,h5 {
     text-align: left !important;
 
 }
-
+h1{
+    font-size: 48px !important;
+}
+h2{
+    font-size: 32px !important;
+}
 
 .container {
     width: 100%;

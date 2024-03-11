@@ -20,13 +20,13 @@ class Inputs extends React.Component {
         <section className="section pb-0 section-components">
           <Container className="mb-5">
             {/* Inputs */}
-            <h2 className="text-center text_black font-weight-bold mb-4">
+            <h3 className="text-center text_black font-weight-bold mb-4">
               Elevate Your Business Journey with Our Newsletter!
-            </h2>
+            </h3>
             <div className="mb-3">
-              <h3 className="text_black text-left Eina01-Regular">
+              <span style={{fontSize:"24px"}} className="text_black text-left Eina01-Regular">
                 Subscribe to our exclusive newsletter for a powerhouse of business insights, insider tips, and venture opportunities delivered directly to your inbox. From expert advice and strategic guidance to emerging ventures and special offers, we've got your entrepreneurial needs covered.
-              </h3>
+              </span>
             </div>
             <Row className="pt-4">
               <Col lg="3" sm="6">

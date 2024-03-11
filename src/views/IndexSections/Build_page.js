@@ -2,16 +2,16 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 import DemoNavbar from "../../components/Navbars/DemoNavbar.js";
 
 class BasicElements extends React.Component {
   render() {
     return (
       <>
-         <Link to={"/"}>
+         <a to={"/"}>
         <DemoNavbar />
-        </Link>
+        </a>
         <section className="section section-components " id="section-components"
         >
           <Container>
@@ -34,16 +34,16 @@ class BasicElements extends React.Component {
               
 
                   <div className="text-center pt-2">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -64,16 +64,16 @@ class BasicElements extends React.Component {
 
                   </div>
                   <div className="text-center pt-3 pb-1">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col> <Col lg="12" md="12" sm="12" xl="4" className="mt-5  " >
@@ -94,16 +94,16 @@ class BasicElements extends React.Component {
 
                   </div>
                   <div className="text-center pt-3 pb-1">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -126,16 +126,16 @@ class BasicElements extends React.Component {
 
                   </div>
                   <div className="text-center pt-2">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -156,16 +156,16 @@ class BasicElements extends React.Component {
 
                   </div>
                   <div className="text-center pt-2">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col> <Col lg="12" md="12" sm="12" xl="4" className="mt-5  " >
@@ -185,16 +185,16 @@ class BasicElements extends React.Component {
 
                   </div>
                   <div className="text-center pt-2">
-                    <Link to="/build">
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className=" rounded w-30 mr-5 text-center" color="dark" type="button">
                       <i className="fa fa-eye " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
-                    <Link to="/build">
+                    </a>
+                    <a  href=" https://we.tl/t-oWutX908EL" target="_blank" rel="noopener noreferrer">
                       <Button className="w-30  text-center"  color="primary" type="button">
                       <i className="fa fa-arrow-circle-down " style={{fontSize:"40px"}}></i>
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -203,7 +203,7 @@ class BasicElements extends React.Component {
             {/*              
                 <Button
                   className="text-danger ml-1"
-                  color="link"
+                  color="a"
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
                 >

@@ -8,7 +8,7 @@ export default function DemoNavbar() {
       <>
         <header className="">
           <Navbar className="nav_textM  justify_center UnderLine1"   >
-           <h3> <b>CarteTheBlanche</b></h3>
+           <h4> <b>CarteTheBlanche</b></h4>
           </Navbar>
         </header>
       </>

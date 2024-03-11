@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = 'https://aslan-react-strip.vercel.app'
+const YOUR_DOMAIN = 'http://192.168.107.145:3000'
 app.use(express.json());
 app.post('/create-checkout-session', async (req, res) => {
   const PRICE = req.body.price;
