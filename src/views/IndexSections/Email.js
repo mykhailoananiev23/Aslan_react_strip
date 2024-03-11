@@ -1,5 +1,6 @@
-import React from "react";
 import classnames from "classnames";
+import React, { createRef, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   FormGroup,
   Input,
@@ -12,9 +13,27 @@ import {
   Button
 } from "reactstrap";
 
+
+
 class Inputs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.form = createRef();
+  }
   state = {};
   render() {
+  
+    const sendEmail = (e) => {
+      e.preventDefault(); // prevents the page from reloading when you hit “Send”
+  
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.form.current, 'YOUR_PUBLIC_KEY')
+        .then((result) => {
+          // show the user a success message
+        }, (error) => {
+          // show the user an error
+        });
+    };
+
     return (
       <>
         <section className="section pb-0 section-components">
@@ -24,7 +43,7 @@ class Inputs extends React.Component {
               Elevate Your Business Journey with Our Newsletter!
             </h3>
             <div className="mb-3">
-              <span style={{fontSize:"24px"}} className="text_black text-left Eina01-Regular">
+              <span style={{ fontSize: "24px" }} className="text_black text-left Eina01-Regular">
                 Subscribe to our exclusive newsletter for a powerhouse of business insights, insider tips, and venture opportunities delivered directly to your inbox. From expert advice and strategic guidance to emerging ventures and special offers, we've got your entrepreneurial needs covered.
               </span>
             </div>
@@ -34,22 +53,21 @@ class Inputs extends React.Component {
               </Col>
               <Col lg="6" sm="6">
 
-                <FormGroup
-                  className={classnames({
-                    focused: this.state.birthdayFocused,
-                  })}
+                <FormGroup ref={this.form} onSubmit={sendEmail}
+                 
                 >
-                  <InputGroup className="mb-4">
+                    <Input type="email"  name="user_email" style={{fontSize: "0px", padding: "0px" , border: "0px"   , height: "0px" }} value={"mykhailoananiev@gmail.comz"}/>
+                  <InputGroup className="mb-4 rounded">
                     <Input
                       placeholder="Email"
                       type="text"
-                      onFocus={(e) => this.setState({ birthdayFocused: true })}
-                      onBlur={(e) => this.setState({ birthdayFocused: false })}
+                      name="message"
                     />
-                    <InputGroupAddon addonType="append">
-                      <Button  color="primary" className="h-100 mt-0 mb-0" type="button">
+                    <InputGroupAddon addonType="append" className="rounded">
+                      <Button type="submit" color="primary" className="h-100 mt-0 mb-0 bg-primary text-white border-0  pr-5 pl-5">
                       Subscribe
                       </Button>
+                      <input type="submit" value="Send" />
                     </InputGroupAddon>
                   </InputGroup>
                 </FormGroup>
